@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý thông tin sinh viên</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" method="" onsubmit="return addData()">
+            <h3>Đăng Ký Tài Khoản User</h3>
+            <div class="container__form">
+                <label for="username_id">User Name:</label>
+                <input type="text" required placeholder="" id="username_id">
+            </div>
+            <div class="container__form">
+                <label for="fullname_id">Full Name:</label>
+                <input type="text" required placeholder="" id="fullname_id">
+            </div>
+            <div class="container__form">
+                <label for="email_id">E-mail:</label>
+                <input type="email" required placeholder="" id="email_id">
+            </div>
+            <div class="container__form">
+                <label for="birthday_id">Birthday:</label>
+                <input type="date" required placeholder="" id="birthday_id">
+            </div>
+            <div class="container__btn">
+                <button class="save btn" type="submit">Save</button>
+                <button class="reset btn" type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <table class="container__table">
+        <thead>
+            <tr>
+                <th class="no">No</th>
+                <th class="username">User Name</th>
+                <th class="fullname">Full Name</th>
+                <th class="email">Email</th>
+                <th class="birthday">Birthday</th>
+                <th class="edit"></th>
+                <th class="delete"></th>
+            </tr>
+        </thead>
+        <tbody id="result_id">
+        </tbody>
+    </table>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./assets/js/app.js"></script>
+</html>
