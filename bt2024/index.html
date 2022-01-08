@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form vay tiền</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <form action="" class="container">
+        <h2>Loan Application Form</h2>
+        <fieldset>
+            <legend>Applicant's Personal Information</legend>
+            <div class="container__form">
+                <label for="">Fullname:</label>
+                <input type="text" required name="fullname" id="fullname_id">
+            </div>
+            <div class="container__form">
+                <label for="">Date of Birth (MM/dd/yyyy):</label>
+                <input type="date" required name="dateofbirth" id="dateofbirth_id">
+            </div>
+            <div class="container__form">
+                <label for="">Phone Number:</label>
+                <input type="text" required name="phonenumber" id="phonenumber_id">
+            </div>
+            <div class="container__form">
+                <label for="">Address:</label>
+                <input type="text" required name="address" id="address_id">
+            </div>
+            <div class="container__form">
+                <label for="">Zip Code:</label>
+                <input type="text" required name="zipcode" id="zipcode_id">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Applicant's Employment InfCurrent Employer</legend>
+            <div class="container__form">
+                <label for="">Current Employer:</label>
+                <input type="text" required name="CurrentEmployer" id="currentEmployer_id">
+            </div>
+            <div class="container__form">
+                <label for="">Employer Address:</label>
+                <input type="text" required name="employerAddress" id="employerAddress_id">
+            </div>
+            <div class="container__form">
+                <label for="">Date of Joining (MM/dd/yyy):</label>
+                <input type="date" required name="dateOfJoining" id="dateOfJoining_id">
+            </div>
+            <div class="container__form">
+                <label for="">Phone Number:</label>
+                <input type="text" required name="employerPhoneNumber" id="employerPhoneNumber_id">
+            </div>
+            <div class="container__form">
+                <label for="">E-mail ID:</label>
+                <input type="email" name="email" id="email_id">
+            </div>
+            <div class="container__form">
+                <label for="">Fax:</label>
+                <input type="number" name="fax" id="fax_id">
+            </div>
+            <div class="container__form">
+                <label for="">Designation:</label>
+                <input type="email" required name="designation" id="designation_id">
+            </div>
+            <div class="container__form">
+                <label for="">Annual Income($):</label>
+                <input type="number" required name="annualIncome" id="annualIncome_id">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Applicant's Personal Information</legend>
+            <div class="container__form">
+                <label for="">Loan Type:</label>
+                <select name="loanType" id="loanType_id">
+                    <option value="0">Select</option>
+                    <option value="Personal Loan">Personal Loan</option>
+                    <option value="Home Loan">Home Loan</option>
+                    <option value="Vehicle Loan">Vehicle Loan</option>
+                    <option value="Business Loan">Business Loan</option>
+                    <option value="Education Loan">Education Loan</option>
+                </select>
+            </div>
+            <div class="container__form">
+                <label for="">Principal($):</label>
+                <input type="number" required name="principal" id="principal_id">
+            </div>
+            <div class="container__form">
+                <label for="">Period(Month):</label>
+                <input type="text" required name="period" id="period_id">
+            </div>
+            <div class="container__form">
+                <label for="">Interest(%):</label>
+                <input type="text" required name="interest" id="interest_id">
+            </div>
+            <div class="form--btn">
+                <button class="btn submit">Submit</button>
+                <button class="btn reset">Reset</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 600px;
+}
+
+.container h2 {
+  background-color: pink;
+  padding: 4px 10px;
+}
+
+.container fieldset {
+  margin: 18px 0;
+  border-color: #a83232;
+  padding: 12px;
+}
+
+.container fieldset legend {
+  color: blue;
+  font-weight: bold;
+}
+
+.container fieldset .container__form {
+  background-color: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container fieldset .container__form label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.container fieldset .container__form input, .container fieldset .container__form select {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding: 4px 6px;
+}
+
+.container fieldset .form--btn {
+  background-color: pink;
+  padding: 8px;
+  text-align: center;
+}
+
+.container fieldset .form--btn .btn {
+  padding: 6px 8px;
+  margin: 12px;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  color: #fff;
+}
+
+.container fieldset .form--btn .btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container fieldset .form--btn .submit {
+  background-color: green;
+}
+
+.container fieldset .form--btn .reset {
+  background-color: red;
+}
+/*# sourceMappingURL=style.css.map */
