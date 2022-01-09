@@ -1,7 +1,6 @@
 
 var studentsList = []
 var currentIndex = -1
-const result = document.querySelector('#result_id')
 openLocalStorage()
 
 function saveLocalStorage(){
@@ -15,28 +14,20 @@ function openLocalStorage(){
     if(json != null && json != ''){
         studentsList = JSON.parse(json)
     }
-    // $('#result_id').val("")
-    result.innerHTML = ''
+    $('#result_id').html("")
+    let ketQua
     for (var i = 0; i < studentsList.length; i++){
-    //     $('#result_id').val(`<tr>
-    //     <td>${i + 1}</td>
-    //     <td>${studentsList[i].username}</td>
-    //     <td>${studentsList[i].fullname}</td>
-    //     <td>${studentsList[i].email}</td>
-    //     <td>${studentsList[i].birthday}</td>
-    //     <td class="btn"><button class="edit-btn" onclick="editData(${i})">Edit</button></td>
-    //     <td class="btn"><button class="delete-btn" onclick="deleteData(${i})">Delete</button></td>
-    // </tr>`)
-        result.innerHTML += `<tr>
-            <td>${i + 1}</td>
-            <td>${studentsList[i].username}</td>
-            <td>${studentsList[i].fullname}</td>
-            <td>${studentsList[i].email}</td>
-            <td>${studentsList[i].birthday}</td>
-            <td class="btn"><button class="edit-btn" onclick="editData(${i})">Edit</button></td>
-            <td class="btn"><button class="delete-btn" onclick="deleteData(${i})">Delete</button></td>
-        </tr>`
+        ketQua += '<tr>'
+            +'<td>' + parseInt(i+1) +'</td>'
+            +'<td>' + studentsList[i].username + '</td>'
+            +'<td>' + studentsList[i].fullname + '</td>'
+            +'<td>' + studentsList[i].email + '</td>'
+            +'<td>' + studentsList[i].birthday + '</td>'
+            +'<td class="btn"><button class="edit-btn" onclick="editData('+ i +')">Edit</button></td>'
+            +'<td class="btn"><button class="delete-btn" onclick="deleteData('+ i +')">Delete</button></td>'
+        +'</tr>'
     }
+    $('#result_id').html(ketQua)
 }
 
 
@@ -76,5 +67,3 @@ function addData(){
 
     return false
 }
-
-
