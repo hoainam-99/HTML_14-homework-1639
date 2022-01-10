@@ -15,19 +15,30 @@ function openLocalStorage(){
         studentsList = JSON.parse(json)
     }
     $('#result_id').html("")
-    let ketQua
-    for (var i = 0; i < studentsList.length; i++){
-        ketQua += '<tr>'
-            +'<td>' + parseInt(i+1) +'</td>'
-            +'<td>' + studentsList[i].username + '</td>'
-            +'<td>' + studentsList[i].fullname + '</td>'
-            +'<td>' + studentsList[i].email + '</td>'
-            +'<td>' + studentsList[i].birthday + '</td>'
-            +'<td class="btn"><button class="edit-btn" onclick="editData('+ i +')">Edit</button></td>'
-            +'<td class="btn"><button class="delete-btn" onclick="deleteData('+ i +')">Delete</button></td>'
-        +'</tr>'
+    // let ketQua
+    // for (var i = 0; i < studentsList.length; i++){
+        // ketQua += '<tr>'
+        //     +'<td>' + parseInt(i+1) +'</td>'
+        //     +'<td>' + studentsList[i].username + '</td>'
+        //     +'<td>' + studentsList[i].fullname + '</td>'
+        //     +'<td>' + studentsList[i].email + '</td>'
+        //     +'<td>' + studentsList[i].birthday + '</td>'
+        //     +'<td class="btn"><button class="edit-btn" onclick="editData('+ i +')">Edit</button></td>'
+        //     +'<td class="btn"><button class="delete-btn" onclick="deleteData('+ i +')">Delete</button></td>'
+        // +'</tr>'
+    // }
+    // $('#result_id').html(ketQua)
+    for(let i = 0; i < studentsList.length; i++){
+        $('#result_id').append(`<tr>
+        <td>${i+1}</td>
+        <td>${studentsList[i].username}</td>
+        <td>${studentsList[i].fullname}</td>
+        <td>${studentsList[i].email}</td>
+        <td>${studentsList[i].birthday}</td>
+        <td class="btn"><button class="edit-btn" onclick="editData(${i})">Edit</button></td>
+        <td class="btn"><button class="delete-btn" onclick="deleteData(${i})">Delete</button></td>
+    </tr>`)
     }
-    $('#result_id').html(ketQua)
 }
 
 
